@@ -1,6 +1,5 @@
-package com.company;
+package company;
 
-import java.util.Collections;
 import java.util.List;
 
 public class Animal {

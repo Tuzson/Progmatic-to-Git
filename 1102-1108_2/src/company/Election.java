@@ -1,4 +1,4 @@
-package com.company;
+package company;
 
 public class Election {
     private int nrOfDistrict;

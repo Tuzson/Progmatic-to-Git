@@ -1,4 +1,6 @@
-package com.company;
+package company;
+
+import java.util.Objects;
 
 public class Pet {
     private int id;
@@ -6,6 +8,8 @@ public class Pet {
     private String species;
     private int age;
     private PetOwner owner;
+    private boolean isFavorite;
+    private boolean isOlderThanOwner;
 
     public Pet(int id, String name, String species, int age) {
         this.id = id;
@@ -54,6 +58,14 @@ public class Pet {
         this.owner = owner;
     }
 
+    public boolean isFavorite() {
+        return isFavorite;
+    }
+
+    public void setFavorite(boolean favorite) {
+        isFavorite = favorite;
+    }
+
     @Override
     public String toString() {
         return "Pet{" +
@@ -61,7 +73,29 @@ public class Pet {
                 ", name='" + name + '\'' +
                 ", species='" + species + '\'' +
                 ", age=" + age +
-                ", owner=" + owner +
+                ", isFavorite=" + isFavorite +
+                ", isOlderThanOwner=" + isOlderThanOwner +
                 '}';
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Pet pet = (Pet) o;
+        return age == pet.age;
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(age);
+    }
+
+    public boolean isOlderThanOwner() {
+        return isOlderThanOwner;
+    }
+
+    public void setOlderThanOwner(boolean olderThanOwner) {
+        isOlderThanOwner = olderThanOwner;
     }
 }

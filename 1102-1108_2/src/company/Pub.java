@@ -1,4 +1,4 @@
-package com.company;
+package company;
 
 import java.util.ArrayList;
 import java.util.HashMap;

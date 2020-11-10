@@ -1,7 +1,6 @@
-package com.company;
+package company;
 
 import java.util.Scanner;
-import java.util.concurrent.TimeUnit;
 
 public class Simulator {
 

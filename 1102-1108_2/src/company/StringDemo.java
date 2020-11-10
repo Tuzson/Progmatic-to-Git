@@ -1,4 +1,4 @@
-package org.progmatic.exercises.sandbox;
+package company;
 
 public class StringDemo {
 

@@ -1,4 +1,4 @@
-package com.company;
+package company;
 
 public class Wine {
     private double portion = 0.2;

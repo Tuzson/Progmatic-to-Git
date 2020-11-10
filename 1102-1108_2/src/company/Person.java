@@ -1,4 +1,4 @@
-package com.company;
+package company;
 
 public class Person {
     private int favoriteDrink;

@@ -1,6 +1,4 @@
-package org.progmatic.exercises.sandbox;
-
-import org.progmatic.exercises.datastructures.indians.Indian;
+package company;
 
 import java.util.Comparator;
 

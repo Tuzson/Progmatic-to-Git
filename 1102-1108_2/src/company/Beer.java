@@ -1,4 +1,4 @@
-package com.company;
+package company;
 
 public class Beer {
     private double portion = 0.5;

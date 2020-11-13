@@ -1,8 +1,8 @@
 package com.company;
 
 public class CityBike extends BikeÖröklődés {
-    boolean light;
-    String horn;
+  protected   boolean light;
+   protected String horn;
 
     public CityBike(double wheelDiameter, int frontCogWheelCogNr, int[] rearCogWheelCogNrs) {
         super(wheelDiameter, frontCogWheelCogNr, rearCogWheelCogNrs);

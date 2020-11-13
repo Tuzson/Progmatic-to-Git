@@ -23,6 +23,8 @@ public class BikeÖröklődés {
         return speedInKmPerH;
     }
 
+
+
     public int nrOfGears(){
         return rearCogWheelCogNrs.length;
     }

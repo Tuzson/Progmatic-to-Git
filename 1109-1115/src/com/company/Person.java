@@ -1,5 +1,7 @@
 package com.company;
 
+import java.util.ArrayList;
+
 public class Person {
 
     String name;
@@ -41,5 +43,19 @@ public class Person {
 
     public void setFather(Dad father) {
         this.father = father;
+    }
+
+
+    public void idCreator (ArrayList<Person> people){
+        int id = 1;
+        if (people.size() > 1){
+           id = people.size();
+           people.get(people.size()-1).setId(id);
+            System.out.println(people.get(people.size()-1).getName() + " létrehozva " + people.get(people.size()-1).getId() + "-es azonosítóval. ");
+        }
+        else {
+            people.get(0).setId(id);
+            System.out.println(people.get(0).getName() + " létrehozva " + people.get(0).getId() + "-es azonosítóval. ");
+        }
     }
 }

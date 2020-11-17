@@ -15,8 +15,7 @@ public class IntelligentInterfaceMain {
     public static String conversation(IntelligentInterface text){
         Scanner sc = new Scanner(System.in);
         String s = sc.nextLine();
-        String answer =text.communication(s);
 
-        return answer;
+        return text.communication(s);
     }
 }

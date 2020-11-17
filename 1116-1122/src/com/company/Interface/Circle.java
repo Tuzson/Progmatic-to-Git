@@ -1,4 +1,4 @@
-package com.company;
+package com.company.Interface;
 
 public class Circle implements Shape {
     protected double r;

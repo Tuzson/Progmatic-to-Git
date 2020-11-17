@@ -1,4 +1,4 @@
-package com.company;
+package com.company.Interface;
 
 public class Hexagon implements Shape {
     protected double a ;

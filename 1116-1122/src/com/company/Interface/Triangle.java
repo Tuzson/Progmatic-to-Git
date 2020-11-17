@@ -1,4 +1,4 @@
-package com.company;
+package com.company.Interface;
 
 public class Triangle implements Shape {
     protected double a;

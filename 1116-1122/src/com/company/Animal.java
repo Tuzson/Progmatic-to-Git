@@ -1,7 +1,7 @@
 package com.company;
 
 public abstract class Animal {
-   protected String type;
+    protected String type;
     protected String livingArea;
     protected int age;
 

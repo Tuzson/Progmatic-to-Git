@@ -17,5 +17,6 @@ public class IntelligentInterfaceMain {
         String s = sc.nextLine();
 
         return text.communication(s);
+
     }
 }

@@ -7,17 +7,16 @@ import java.util.*;
 public class Indian {
     private String name;
     private String tribe;
-    private String gender;
+    private IndianGender genderEnum;
     private Integer age;
     private List<String> equipments;
 
-    public Indian(String name, String tribe, String gender, Integer age, List<String> equipments) throws FileNotFoundException {
+    public Indian(String name, String tribe, IndianGender genderEnum, Integer age, List<String> equipments) {
         this.name = name;
         this.tribe = tribe;
-        this.gender = gender;
+        this.genderEnum = genderEnum;
         this.age = age;
         this.equipments = equipments;
-
     }
 
     @Override
@@ -25,21 +24,21 @@ public class Indian {
         return "Indian{" +
                 "name='" + name + '\'' +
                 ", tribe='" + tribe + '\'' +
-                ", gender='" + gender + '\'' +
+                ", genderEnum=" + genderEnum +
                 ", age=" + age +
                 ", equipments=" + equipments +
                 '}';
     }
 
-    public String getGender () {
-            return gender;
-        }
+    public IndianGender getGenderEnum() {
+        return genderEnum;
+    }
 
-        public void setGender (String gender){
-            this.gender = gender;
-        }
+    public void setGenderEnum(IndianGender genderEnum) {
+        this.genderEnum = genderEnum;
+    }
 
-        public Integer getAge () {
+    public Integer getAge () {
             return age;
         }
 

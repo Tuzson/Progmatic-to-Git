@@ -36,7 +36,7 @@ public class óraifeladat2027_List_Set_Map {
         //Milyen a férfi arány a Seminole törzsben?
 
         for (Indian indian : indianList) {
-            if (indian.getTribe().equals("Seminole") && indian.getGender().equals("f")) {
+            if (indian.getTribe().equals("Seminole") && indian.getGenderEnum().equals(IndianGender.FÉRFI)) {
                 counter++;
             }
         }
@@ -95,17 +95,23 @@ public class óraifeladat2027_List_Set_Map {
         }
         System.out.println("A(z) " + tribe + " törzsben vannak a legtöbben. " + max + " fő");
 
-        //Milyen a férfi arány az egyes indián törzseknél?
-        //NEM JÓ!!!
+       // Milyen a férfi arány az egyes indián törzseknél?
+      //  NEM JÓ!!!
 
-//        int maleIndian = 0;
-//        for (Indian indian : set1) {
-//            if (indiansByTribe.get(indian.getTribe()).)){
-//                maleIndian = indiansByTribe.get(indian.getTribe()).size() - indiansByTribe.get(indian.getTribe()).
-//
-//            }
-//            System.out.println("Az " + indian.getTribe() + " törzs férfi/nő aránya: " + (maleIndian / (indiansByTribe.get(indian.getTribe()).size() - maleIndian)));
-//        }
+        int maleIndian = 0;
+
+        for (String s : indiansByTribe.keySet()) {
+            for (int i = 0; i < indiansByTribe.get(s).size(); i++) {
+                if (indiansByTribe.get(s).get(i).getGenderEnum().equals(IndianGender.FÉRFI)){
+                    maleIndian++;
+                }
+            }
+            System.out.println("A " + s + " törzs össz létszáma: " + indiansByTribe.get(s).size() + " fő. Ebből " + maleIndian + "/" + (indiansByTribe.get(s).size() - maleIndian) + " a férfi/nő arány");
+            maleIndian = 0;
+
+
+        }
+
 
 //        for (Indian indian : set1) {
 //            if (indiansByTribe.containsKey(indian.getTribe())&& indiansByTribe.get(indian.getTribe().contains(indian.getEquipments().equals("tomahawk"))))
@@ -138,8 +144,12 @@ public class óraifeladat2027_List_Set_Map {
             String[] arr1 = sc.nextLine().split(",");   //Itt a következő sorban lévő Stringeket szétszedi ott ahol ","-t talál és berakja az arr1 tömbbe.
             String[] arr2 = arr1[4].split("\\|");   //Itt az arr1 tömb 4. indexén található String-et szedi szét ott ahol "|"-t talál és berakja az arr2 tömbbe.
             List<String> set = Arrays.asList(arr2);
-            list.add(new Indian(arr1[0], arr1[1], arr1[2], Integer.valueOf(arr1[3]), set));
-
+            if (arr1[2].equals("f")) {
+                list.add(new Indian(arr1[0], arr1[1], IndianGender.FÉRFI, Integer.valueOf(arr1[3]), set));
+            }
+            else {
+                list.add(new Indian(arr1[0], arr1[1], IndianGender.NŐ, Integer.valueOf(arr1[3]), set));
+            }
         }
         return list;
     }

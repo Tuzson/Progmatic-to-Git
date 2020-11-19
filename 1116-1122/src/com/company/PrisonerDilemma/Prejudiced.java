@@ -4,6 +4,7 @@ import java.util.HashMap;
 
 public class Prejudiced extends SuspectProfile {
     public Prejudiced() {
+        super("Prejudiced" + " " + (int)(Math.random()*100));
 
     }
 

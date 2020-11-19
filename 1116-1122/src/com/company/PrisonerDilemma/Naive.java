@@ -5,6 +5,7 @@ import java.util.HashMap;
 public class Naive extends SuspectProfile {
 
     public Naive() {
+        super("Naive" + " " + (int)(Math.random()*100));
 
     }
 

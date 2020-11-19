@@ -5,6 +5,7 @@ import java.util.HashMap;
 public class BadGuy extends SuspectProfile {
 
     public BadGuy() {
+        super("BadGuy" + " " + (int)(Math.random()*100));
 
     }
 
@@ -19,7 +20,7 @@ public class BadGuy extends SuspectProfile {
             cooperations.put(other, noncoperations.get(other));
             noncoperations.remove(other);
         } else if (year == 0) {
-            cooperations.putIfAbsent(other, year);
+            cooperations.putIfAbsent(other, 0);
             cooperations.put(other, -year);
         } else if (noncoperations.containsKey(other) && year == 1) {
             cooperations.put(other, noncoperations.get(other) - 1);
@@ -43,4 +44,5 @@ public class BadGuy extends SuspectProfile {
 
 
     }
+
 }

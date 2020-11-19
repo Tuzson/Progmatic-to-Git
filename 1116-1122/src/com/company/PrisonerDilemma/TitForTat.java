@@ -4,6 +4,7 @@ import java.util.HashMap;
 
 public class TitForTat extends SuspectProfile {
     public TitForTat() {
+        super("TitForTat" + " " + (int)(Math.random()*100));
 
 
     }

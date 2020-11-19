@@ -4,6 +4,7 @@ import java.util.HashMap;
 
 public class Random extends SuspectProfile {
     public Random() {
+        super("Random" + " " + (int)(Math.random()*100));
 
     }
 

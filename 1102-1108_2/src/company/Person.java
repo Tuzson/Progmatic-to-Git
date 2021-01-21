@@ -28,11 +28,7 @@ public class Person {
     }
     public void isThirstyAgain() {
         int rand1 = (int) (Math.random() * 2);
-        if (rand1 == 1) {
-            isThirsty = true;
-        } else {
-            isThirsty = false;
-        }
+        isThirsty = rand1 == 1;
     }
 
     public void drink(double alcoholLevel) {

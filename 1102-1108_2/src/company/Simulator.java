@@ -9,8 +9,8 @@ public class Simulator {
         int dailyNoOrder = 0;
         int i = 1;
         while (i <= days && pub.getIncomes() > 0) {
+            Scanner sc = new Scanner(System.in);
             if (i % 10 == 0) {
-                Scanner sc = new Scanner(System.in);
                 System.out.println("Az előző napi adatok:\n" + "napi zárás: " + pub.getDailyIncome() + "\n" + "Sör " + pub.getBeerCapacity() + "\n Bor: " + pub.getWineCapacity() + "\n Pálinka: " + pub.getPálinkaCapacity() + "\n Ki nem szolgált vendég összesen: " + dailyNoOrder);
                 pub.setDailyIncome(0);
                 dailyNoOrder = 0;
@@ -35,12 +35,8 @@ public class Simulator {
                 System.out.println("Mennyi pálinkát rendelsz ma? (300Ft/5dl) (3000/üveg) --> 10db. Rendelkezésre álló összeg:" + pub.getIncomes());
                 int pálinkaOrder = sc.nextInt();
                 pub.pálinkaOrder(pálinkaOrder);
-                System.out.println("Mennyi legyen ma az eladási ára?");
-                sc = new Scanner(System.in);
-                pub.bolyhos.setPrice(sc.nextInt());
             }
             else {
-               Scanner sc = new Scanner(System.in);
                 System.out.println("Az előző napi adatok:\n" + "napi zárás: " + pub.getDailyIncome() + "\n" + "Sör " + pub.getBeerCapacity() + "\n Bor: " + pub.getWineCapacity() + "\n Pálinka: " + pub.getPálinkaCapacity() + "\n Ki nem szolgált vendég összesen: " + sumNoOrders);
                 pub.setDailyIncome(0);
                 System.out.println("Add le a napi rendelésed!");
@@ -61,10 +57,10 @@ public class Simulator {
                 System.out.println("Mennyi pálinkát rendelsz ma? (300Ft/5dl) (3000/üveg) --> 10db. Rendelkezésre álló összeg:" + pub.getIncomes());
                 int pálinkaOrder = sc.nextInt();
                 pub.pálinkaOrder(pálinkaOrder);
-                System.out.println("Mennyi legyen ma az eladási ára?");
-                sc = new Scanner(System.in);
-                pub.bolyhos.setPrice(sc.nextInt());
             }
+            System.out.println("Mennyi legyen ma az eladási ára?");
+            sc = new Scanner(System.in);
+            pub.bolyhos.setPrice(sc.nextInt());
             for (int j = 0; j < pub.getOpeningHours() * 2; j++) {
                 pub.arrive();
                 for (int k = 0; k < pub.people.size(); k++) {

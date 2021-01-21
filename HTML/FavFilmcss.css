@@ -1,0 +1,26 @@
+body{
+    background-color: peru;
+}
+.center{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+#Cím{
+    margin-top: auto;
+    color: #00ff00
+}
+.h2{
+    text-decoration: underline;
+   font-weight: bold ;
+    color: #860000;
+}
+#link{
+    color: blue;
+    text-decoration: underline;
+    font-size: 24px;
+}
+.comment{
+    font-size: 18px;
+}

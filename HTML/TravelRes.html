@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Travel reservation form</title>
+    <style>
+        .box{
+            border: black 2px solid;
+           display:inline-block;
+        }
+    </style>
+</head>
+<body>
+<div class="box">
+<h1>Travel reservation form</h1>
+<h3 style="padding-top: 15px;padding-bottom: 20px">* ednotes mandotory</h3>
+
+
+<form class="text">Full name*:<br>
+<input type="text" name="full name" placeholder="FirstName LastName"><br>
+    Email address*:<br>
+    <input type="email" name="email" placeholder="EMAIL_ADDRESS"><br>
+    Select Tour Package*:<br>
+    <select name="package">
+        <option value="Goa">Goa</option>
+        <option value="Other">Other</option>
+
+</select><br>
+    Arrival date*:<br>
+    <input type="date" name="arrival date" placeholder="m/d/y"><br>
+    Number of person*:<br>
+    <input type="number" name="nrOfPerson" placeholder="UNKNOWN_TYPE"><br>
+    What would you want to avail?*<br>
+    Boarding
+    <input type="checkbox" name="checkbox"><br>
+    Fooding
+    <input type="checkbox" name="checkbox"><br>
+    Sight seeing
+    <input type="checkbox" name="checkbox"><br>
+    Discount Coupon code:<br>
+    <input type="text" name="coupon" placeholder="UNKNOWN_TYPE"><br>
+    Terms and conditions*<br>
+    <label>
+        <input type="radio" name="agree" value="no"> I agree
+        <input type="radio" name="disagree" value="no">I disagree
+    </label>
+    <br>
+    <input type="submit" value="Complete reservation">
+
+
+
+</form>
+</div>
+
+</body>
+</html>

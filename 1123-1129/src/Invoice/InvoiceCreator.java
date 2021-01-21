@@ -5,6 +5,7 @@ public class InvoiceCreator {
         invoiceTest(createInvoice());
 
 
+
     }
     public static Invoice createInvoice(){
         int randomAmount = (int)(Math.random()*500);

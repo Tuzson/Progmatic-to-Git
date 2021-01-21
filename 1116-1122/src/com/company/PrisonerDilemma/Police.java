@@ -136,11 +136,4 @@ public class Police {
 
     }
 
-    @Override
-    public String toString() {
-        return "Police{" +
-                "suspects=" + suspects +
-                ", statistics=" + statistics +
-                '}';
-    }
 }
